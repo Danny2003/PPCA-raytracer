@@ -50,8 +50,8 @@ fn render_text(image: &mut RgbImage, msg: &str) {
         panic!(format!(
             "error constructing a Font from data at {:?}",
             font_path
-        ))
-    })
+        ));
+    });
     let font: Font = Font::try_from_vec(data).unwrap_or_else(|| {
         panic!(format!(
             "error constructing a Font from data at {:?}",
