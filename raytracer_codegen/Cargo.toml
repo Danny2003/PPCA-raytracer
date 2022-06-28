@@ -1,7 +1,10 @@
 [package]
 name = "raytracer_codegen"
 version = "0.1.0"
-authors = ["Alex Chi <iskyzh@gmail.com>"]
+authors = [
+    "Alex Chi <iskyzh@gmail.com>",
+    "Youwei Zhong <zhongyouwei@sjtu.edu.cn>",
+]
 edition = "2018"
 
 [lib]

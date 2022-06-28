@@ -4,7 +4,3 @@ members = [
     "raytracer",
     "raytracer_codegen",
 ]
-
-authors = [
-    "Youwei Zhong <zhongyouwei@sjtu.edu.cn>"
-]
