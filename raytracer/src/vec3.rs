@@ -1,4 +1,4 @@
-use std::ops::{Neg, Add, AddAssign, Sub, SubAssign, Mul, MulAssign, Div};
+use std::ops::{Add, AddAssign, Div, Mul, MulAssign, Neg, Sub, SubAssign};
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Vec3 {
@@ -49,7 +49,7 @@ impl Vec3 {
         (self.x * self.x + self.y * self.y + self.z * self.z).sqrt()
     }
 
-    /// Vec3::elemul multiply Vec3 by element. 
+    /// Vec3::elemul multiply Vec3 by element.
     pub fn elemul(a: Self, b: Self) -> Self {
         Self {
             x: a.x * b.x,
@@ -88,7 +88,6 @@ impl Neg for Vec3 {
         }
     }
 }
-
 
 impl Add for Vec3 {
     type Output = Self;
@@ -357,5 +356,4 @@ mod tests {
     fn test_unit_panic() {
         Vec3::new(0.0, 0.0, 0.0).unit();
     }
-
 }
