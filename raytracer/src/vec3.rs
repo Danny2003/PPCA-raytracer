@@ -22,9 +22,9 @@ impl Vec3 {
 
     pub fn get(&self, index: i32) -> f64 {
         match index {
-            0 => return self.x,
-            1 => return self.y,
-            2 => return self.z,
+            0 => self.x,
+            1 => self.y,
+            2 => self.z,
             _ => panic!("Index out of bound!"),
         }
     }
@@ -60,11 +60,11 @@ impl Vec3 {
 
     /// Vec3::Mul is cross product.
     pub fn cross(a: Self, b: Self) -> Self {
-        return Self::new(
+        Self::new(
             a.y * b.z - a.z * b.y,
             a.z * b.x - a.x * b.z,
             a.x * b.y - a.y * b.x,
-        );
+        )
     }
 
     pub fn unit(&self) -> Self {
@@ -72,7 +72,7 @@ impl Vec3 {
         if length == 0.0 {
             panic!("Divided by 0.0!");
         } else {
-            return *self / length;
+            *self / length
         }
     }
 }
